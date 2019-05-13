@@ -19,6 +19,7 @@
 <script>
 import {db} from '@/main'
 import {mapState} from 'vuex'
+import moment from 'moment'
 export default {
   name: 'TasksList',
   data() {

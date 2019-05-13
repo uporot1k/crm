@@ -31,6 +31,7 @@ export default {
       body: ''
     }
   },
+  
   methods: {
     submit () {
       console.log(moment)
@@ -38,7 +39,9 @@ export default {
         const task = {
           name: this.name,
           body: this.body,
-          date: moment(new Date).format("DD/MM/YYYY")
+          date: moment(new Date).format("DD/MM/YYYY ss:mm:hh"),
+          workTime: 0,
+          active: false
         }
         db.collection('tasks').add({
           ...task
